@@ -3,6 +3,9 @@ input.onButtonPressed(Button.A, function () {
         cuteBot.turnleft()
     }
 })
+input.onButtonPressed(Button.B, function () {
+    cuteBot.moveTime(cuteBot.Direction.forward, 100, 60)
+})
 led.setBrightness(255)
 basic.showString("2+2=1")
 basic.showIcon(IconNames.No)
@@ -17,7 +20,7 @@ basic.showString("2+2=4")
 basic.showIcon(IconNames.Yes)
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
-cuteBot.moveTime(cuteBot.Direction.forward, 100, 60)
 basic.forever(function () {
+    music.setVolume(255)
     music.play(music.stringPlayable("E B C5 A B G A F ", 120), music.PlaybackMode.UntilDone)
 })
